@@ -1,0 +1,49 @@
+{
+    "formFields": [
+      {
+        "mode": "Edit",
+        "size": "xSmall",
+        "validations": [
+          {
+            "name": "RequiredFieldValidation",
+            "options": [
+              {
+                "key": "isRequired",
+                "value": false,
+                "validationMessage": "ERP_Error_FieldThisFieldIsRequired"
+              }
+            ]
+          }
+        ],
+        "type": "Dropdown",
+        "dataItems": [
+          {
+            "key": "invoice",
+            "value": "Invoice"
+          },
+          {
+            "key": "payment",
+            "value": "Payment"
+          },
+          {
+            "key": "order",
+            "value": "Order"
+          },
+          {
+            "key": "package",
+            "value": "Package"
+          },
+          {
+            "key": "transfer",
+            "value": "Transfer"
+          }
+        ],
+        "defaultValue": "",
+        "visible": true,
+        "componentName": "type",
+        "placeholder": "ERP_LblSearchByType",
+        "internalName": "type",
+        "displayName": "ERP_LblSearchByType"
+      }
+    ]
+  }

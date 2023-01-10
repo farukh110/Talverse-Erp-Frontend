@@ -1,0 +1,27 @@
+{
+    "formFields": [
+        {
+            "validations":[
+                {
+                   "name":"RequiredFieldValidation",
+                   "options":[
+                      {
+                         "key":"isRequired",
+                         "value":false,
+                         "validationMessage":"ERP_Error_FieldPleaseSelectProduct"
+                      }
+                   ]
+                }
+             ],
+            "componentName": "productId",
+            "placeholder": "ERP_LblSearchByProduct",
+            "selectText": "ERP_LblSearchByProduct",
+            "dataSource": "GetAllNonCampaignProductList",
+            "dataTextField": "productName",
+            "dataValueField": "id",
+            "preserveItemAfterSelection": true,
+            "parameters": [
+            ]
+        }
+    ]
+}

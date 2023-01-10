@@ -1,0 +1,48 @@
+{
+    "formFields": [
+      {
+        "mode": "Display",
+        "size": "Large",
+        "type": "Text",
+        "defaultValue": "",
+        "visible": false,
+        "internalName": "code",
+        "displayName": "ERP_LblCode",
+        "value": ""
+      },
+
+      {
+        "mode": "Edit",
+        "size": "Large",
+        "type": "Number",
+        "defaultValue": "",
+        "visible": true,
+        "internalName": "rate",
+        "displayName": "ERP_LblRate",
+        "validations": [
+          {
+            "name": "RequiredFieldValidation",
+            "options": [
+              {
+                "key": "isRequired",
+                "value": true,
+                "validationMessage": "ERP_Error_FieldThisFieldIsRequired"
+              }
+            ]
+          }
+        ],
+        "value": ""
+      },
+      {
+        "mode": "Display",
+        "size": "Small",
+        "validations": [],
+        "type": "Text",
+        "defaultValue": "",
+        "visible": false,
+        "internalName": "id",
+        "displayName": "Id",
+        "value": ""
+      }
+    ]
+  }

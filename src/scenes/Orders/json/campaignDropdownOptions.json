@@ -1,0 +1,23 @@
+{
+    "validations":[
+        {
+           "name":"RequiredFieldValidation",
+           "options":[
+              {
+                 "key":"isRequired",
+                 "value":true,
+                 "validationMessage":"ERP_Error_FieldPleaseSelectCampaign"
+              }
+           ]
+        }
+     ],
+    "componentName": "campaignId",
+    "placeholder": "ERP_LblSearchByCampaign",
+    "selectText": "ERP_LblSearchByCampaign",
+    "dataSource": "GetAllCampaignBasedOnRecentlyStarted",
+    "dataTextField": "name",
+    "dataValueField": "id",
+    "preserveItemAfterSelection": true,
+    "parameters": [
+    ]
+}

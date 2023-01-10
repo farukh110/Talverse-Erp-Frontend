@@ -1,0 +1,98 @@
+/* ------ start statistics ------ */
+
+.administration-container 
+{
+  color: #CCC;
+
+  a
+  {
+      color: #fff;
+  }
+
+    .box 
+    {
+        background-color: #313348;
+        position: relative;
+        padding: 15px;
+        overflow: hidden;
+        margin-bottom: 25px;
+        color: #fff;
+        text-align: center;
+
+           & > .custom-icon 
+        {
+            position: absolute;
+            height: 70px;
+            width: 70px;
+            font-size: 22px;
+            padding: 15px;
+            top: -25px;
+            left: -25px;
+            background-color: rgba(255, 255, 255, 0.15);
+            line-height: 60px;
+            text-align: right;
+            border-radius: 50%;
+        }
+
+        .info 
+        {
+        float: left;
+        width: auto;
+        margin-left: 10px;
+
+            p 
+            {
+            color:#fff !important;
+            
+            }
+        }
+
+    }
+
+    .h2
+    {
+        color: #ffffff !important;
+        font-size: 22px;
+
+        &::after
+              {
+                content: "";
+                height: 2px;
+                width: 88%;
+                margin: auto;
+                background-color: rgba(255, 255, 255, 0.12);
+                display: block;
+                margin-top: 10px;
+              }
+    }
+
+    .text-left
+    {
+        text-align: left;
+        cursor: pointer;
+    }
+}
+
+
+.back-primary
+{
+   background-color: @secondary-color !important;
+}
+
+.back-danger
+{
+   background-color: @primary-color !important;
+}
+
+.back-warning
+{
+   background-color: @success-color !important;
+}
+
+.back-success
+{
+   background-color: @warning-color !important;
+}
+
+
+/* ------ end statistics ------ */

@@ -1,0 +1,25 @@
+{
+    "formFields": [
+      {
+        "mode": "ReadOnly",
+        "size": "Small",
+        "type": "Text",
+        "defaultValue": "",
+        "visible": true,
+        "internalName": "code",
+        "displayName": "ERP_LblCode",
+        "value": ""
+      },
+
+      {
+        "mode": "ReadOnly",
+        "size": "Small",
+        "type": "Number",
+        "defaultValue": "",
+        "visible": true,
+        "internalName": "rate",
+        "displayName": "ERP_LblRate",
+        "value": ""
+      }
+    ]
+  }

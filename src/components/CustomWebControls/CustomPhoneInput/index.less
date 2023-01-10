@@ -1,0 +1,62 @@
+:root {
+	--PhoneInput-color--focus: #03b2cb;
+	--PhoneInputInternationalIconPhone-opacity: 0.8;
+	--PhoneInputInternationalIconGlobe-opacity: 0.65;
+	--PhoneInputCountrySelect-marginRight: 0.38em;
+	--PhoneInputCountrySelectArrow-width: 0.6em;
+	--PhoneInputCountrySelectArrow-marginLeft: var(--PhoneInputCountrySelect-marginRight);
+	--PhoneInputCountrySelectArrow-borderWidth: 1px;
+	--PhoneInputCountrySelectArrow-opacity: 0.45;
+	--PhoneInputCountrySelectArrow-color: inherit;
+	--PhoneInputCountrySelectArrow-color--focus: var(--PhoneInput-color--focus);
+	--PhoneInputCountrySelectArrow-transform: rotate(45deg);
+	--PhoneInputCountryFlag-aspectRatio: 1.5;
+	--PhoneInputCountryFlag-height: 1em;
+	--PhoneInputCountryFlag-borderWidth: 1px;
+	--PhoneInputCountryFlag-borderColor: rgba(0,0,0,0.5);
+	--PhoneInputCountryFlag-borderColor--focus: var(--PhoneInput-color--focus);
+	--PhoneInputCountryFlag-backgroundColor--loading: rgba(0,0,0,0.1);
+}
+
+.PhoneInput
+{
+    border: 1px solid #d9d9d9;
+    border-radius: 2px;
+    padding: 1px 12px;
+    transition: all 0.3s;
+
+     &:focus-visible
+   {
+        input
+      {
+         border-color: transparent !important;   
+      }
+   }
+    
+    input
+    {
+        border-color: transparent;
+
+        &:focus-visible
+        {
+            border-color: transparent !important;
+        }
+    }
+
+    &:hover
+    {
+        border-color: #e07ba7;
+    }
+
+    &:focus-visible
+    {
+        input
+      {
+        border-color: transparent;
+      }
+    }
+}
+
+.PhoneInput input:focus-visible {
+    outline: none !important;
+}

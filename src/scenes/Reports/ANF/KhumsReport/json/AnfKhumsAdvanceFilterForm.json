@@ -1,0 +1,15 @@
+{
+  "formFields": [
+    {
+      "mode": "Edit",
+      "size": "xSmall",
+      "type": "RangePicker",
+      "dataItems": [],
+      "defaultValue": null,
+      "visible": true,
+      "internalName": "orderDate",
+      "displayName": "ERP_LblOrderDate",
+      "value": ""
+    }
+  ]
+}

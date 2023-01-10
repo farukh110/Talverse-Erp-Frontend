@@ -1,0 +1,174 @@
+{
+  "formFields": [
+    {
+      "mode": "Edit",
+      "size": "Small",
+      "validations": [
+        {
+          "name": "RequiredFieldValidation",
+          "options": [
+            {
+              "key": "isRequired",
+              "value": true,
+              "validationMessage": "ERP_Error_FieldPleaseSelectCampaign"
+            }
+          ]
+        }
+      ],
+      "type": "Dropdown",
+      "dataItems": [],
+      "defaultValue": "",
+      "visible": true,
+      "internalName": "campaignId",
+      "displayName": "ERP_LblCampaign",
+      "value": ""
+    },
+    {
+      "mode": "Edit",
+      "size": "Small",
+      "validations": [
+        {
+          "name": "RequiredFieldValidation",
+          "options": [
+            {
+              "key": "isRequired",
+              "value": true,
+              "validationMessage": "ERP_Error_FieldPleaseSelectService"
+            }
+          ]
+        }
+      ],
+      "type": "Dropdown",
+      "dataItems": [],
+      "defaultValue": "",
+      "visible": true,
+      "internalName": "productId",
+      "displayName": "ERP_LblSpecialService",
+      "value": ""
+    },
+    {
+      "mode": "Edit",
+      "size": "Small",
+      "validations": [
+        {
+          "name": "RequiredFieldValidation",
+          "options": [
+            {
+              "key": "isRequired",
+              "value": true,
+              "validationMessage": "ERP_Error_FieldPleaseSelectForm"
+            }
+          ]
+        }
+      ],
+      "type": "Dropdown",
+      "dataItems": [],
+      "defaultValue": "",
+      "visible": true,
+      "internalName": "formId",
+      "displayName": "ERP_LblForm",
+      "value": ""
+    },
+    {
+      "mode": "Edit",
+      "size": "Small",
+      "validations": [
+        {
+          "name": "RequiredFieldValidation",
+          "options": [
+            {
+              "key": "isRequired",
+              "value": true,
+              "validationMessage": "ERP_Error_FieldPleaseEnterOrderDate"
+            }
+          ]
+        }
+      ],
+      "type": "DatePicker",
+      "defaultValue": "",
+      "visible": true,
+      "internalName": "orderDate",
+      "displayName": "ERP_LblOrderDate",
+      "value": ""
+    },
+    {
+      "mode": "Edit",
+      "size": "xSmall",
+      "validations": [
+        {
+          "name": "RequiredFieldValidation",
+          "options": [
+            {
+              "key": "isRequired",
+              "value": true,
+              "validationMessage": "ERP_Error_FieldPleaseSelectUser"
+            }
+          ]
+        }
+      ],
+      "type": "Dropdown",
+      "dataItems": [],
+      "defaultValue": "",
+      "visible": true,
+      "internalName": "supporterId",
+      "displayName": "ERP_LblRepName",
+      "value": ""
+    },
+    {
+      "mode": "Edit",
+      "size": "xSmall",
+      "validations": null,
+      "type": "Dropdown",
+      "dataItems": [],
+      "defaultValue": "",
+      "visible": true,
+      "internalName": "donorId",
+      "displayName": "ERP_LblDonor",
+      "value": ""
+    },
+    {
+      "mode": "Edit",
+      "size": "xSmall",
+      "validations": [
+        {
+          "name": "RequiredFieldValidation",
+          "options": [
+            {
+              "key": "isRequired",
+              "value": true,
+              "validationMessage": "ERP_Error_FieldPleaseSelectSupporter"
+            }
+          ]
+        }
+      ],
+      "type": "Text",
+      "defaultValue": "",
+      "visible": true,
+      "internalName": "donorName",
+      "displayName": "ERP_LblDonorName",
+      "value": ""
+    },
+    {
+      "mode": "Edit",
+      "size": "xSmall",
+      "validations": null,
+      "type": "Text",
+      "defaultValue": "",
+      "visible": true,
+      "internalName": "donorContact",
+      "displayName": "ERP_LblDonorContactNumber",
+      "value": ""
+    },
+    {
+      "mode": "Edit",
+      "size": "Large",
+      "type": "CustomSubForm",
+      "dataItems": [],
+      "defaultValue": "",
+      "visible": true,
+      "internalName": "subFormsId",
+      "displayName": "ERP_HdrDonationDetails",
+      "value": ""
+    }
+  ]
+}

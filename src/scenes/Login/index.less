@@ -1,0 +1,149 @@
+@import '~antd/lib/style/themes/default.less';
+
+.main {
+  width: 368px;
+  margin: 0 auto;
+  @media screen and (max-width: @screen-sm) {
+    width: 95%;
+  }
+
+  .icon {
+    font-size: 24px;
+    color: rgba(0, 0, 0, 0.2);
+    margin-left: 16px;
+    vertical-align: middle;
+    cursor: pointer;
+    transition: color 0.3s;
+
+    &:hover {
+      color: @primary-color;
+    }
+  }
+
+  .other {
+    text-align: left;
+    margin-top: 24px;
+    line-height: 22px;
+
+    .register {
+      float: right;
+    }
+  }
+}
+
+.account-container
+{
+  margin-top: 20px;
+
+   button
+   {
+     float: right;
+   }
+
+   .forget-pass-content
+   {
+    button
+     {
+       float: left;
+     }  
+   }
+
+   .btn-back
+   {
+      float: left;
+   }
+}
+
+.box-shadow
+{
+  box-shadow: @box-shadow;
+  -webkit-box-shadow: @box-shadow;
+}
+
+.outer-container
+{
+  display: table;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.middle-container
+{
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.inner-container
+{
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
+
+.account-content
+{
+    .ant-input-affix-wrapper
+    {
+       border-radius: 20px;
+    }
+}
+
+.link-forgot-pass
+{
+   button
+   {
+      padding-left: 0px;
+      border: unset;
+      box-shadow: unset;
+   }
+}
+
+// mobile media queries
+
+@media (max-width: 480px) {
+
+  .account-container
+{
+  margin-top: 20px;
+
+  .margin-top-15px
+  {
+    margin-top: 15px;
+  }
+
+  .margin-top-25px
+  {
+    margin-top: 0px;
+  }
+
+  .forget-pass-content 
+  {
+    button {
+      float: unset;
+  }
+  }
+
+  .ant-row
+  {
+      row-gap: 0 !important;
+  }
+
+   button
+   {
+     margin-top: 20px;
+     float: unset;
+     margin: 0 auto;
+     display: table;
+   }
+
+   p 
+   {
+      margin-top: 15px;
+   }
+   
+}
+
+}

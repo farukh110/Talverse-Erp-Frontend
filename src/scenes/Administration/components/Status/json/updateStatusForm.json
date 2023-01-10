@@ -1,0 +1,194 @@
+{
+    "formFields": [
+        {
+            "mode": "Edit",
+            "size": "Large",
+            "validations": null,
+            "type": "LanguageTranslation",
+            "defaultValue": "",
+            "visible": true,
+            "internalName": "translations",
+            "displayName": "ERP_LblTranslations",
+            "value": "",
+            "fields": [
+                {
+                    "mode": "Edit",
+                    "size": "Medium",
+                    "validations": [],
+                    "type": "Text",
+                    "defaultValue": "",
+                    "visible": true,
+                    "internalName": "internalName",
+                    "displayName": "ERP_LblInternalName",
+                    "value": ""
+                },
+                {
+                    "mode": "Edit",
+                    "size": "Medium",
+                    "validations": [],
+                    "type": "Text",
+                    "defaultValue": "",
+                    "visible": true,
+                    "internalName": "externalName",
+                    "displayName": "ERP_LblExternalName",
+                    "value": ""
+                },
+                {
+                    "mode": "ReadOnly",
+                    "size": "Small",
+                    "validations": null,
+                    "type": "Text",
+                    "defaultValue": "1",
+                    "visible": false,
+                    "internalName": "sourceAppId",
+                    "displayName": "SourceAppId",
+                    "value": "1"
+                }
+            ]
+        },
+        {
+            "mode": "ReadOnly",
+            "size": "Small",
+            "validations": null,
+            "type": "Text",
+            "defaultValue": "1",
+            "visible": false,
+            "internalName": "sourceAppId",
+            "displayName": "SourceAppId",
+            "value": "1"
+        },
+        {
+            "mode": "ReadOnly",
+            "size": "Small",
+            "validations": [
+                {
+                    "name": "RequiredFieldValidation",
+                    "options": [
+                        {
+                            "key": "isRequired",
+                            "value": true,
+                            "validationMessage": "ERP_Error_FieldThisFieldIsRequired"
+                        }
+                    ]
+                }
+            ],
+            "type": "Text",
+            "defaultValue": "",
+            "visible": true,
+            "internalName": "code",
+            "displayName": "ERP_LblCode",
+            "value": ""
+        },
+        {
+            "mode": "Edit",
+            "size": "Small",
+            "validations": [
+                {
+                    "name": "RequiredFieldValidation",
+                    "options": [
+                        {
+                            "key": "isRequired",
+                            "value": false,
+                            "validationMessage": "ERP_Error_FieldThisFieldIsRequired"
+                        }
+                    ]
+                }
+            ],
+            "type": "Dropdown",
+            "dataItems": [
+                {
+                    "key": "invoice",
+                    "value": "Invoice"
+                },
+                {
+                    "key": "payment",
+                    "value": "Payment"
+                },
+                {
+                    "key": "order",
+                    "value": "Order"
+                },
+                {
+                    "key": "package",
+                    "value": "Package"
+                },
+                {
+                    "key": "transfer",
+                    "value": "Transfer"
+                }
+            ],
+            "defaultValue": "",
+            "visible": true,
+            "componentName": "type",
+            "internalName": "type",
+            "displayName": "ERP_LblType",
+            "value": ""
+        },
+        {
+            "mode": "Edit",
+            "size": "Medium",
+            "validations": null,
+            "type": "DatePicker",
+            "defaultValue": "",
+            "visible": false,
+            "internalName": "creationTime",
+            "displayName": "ERP_LblCreationTime",
+            "value": ""
+        },
+        {
+            "mode": "Edit",
+            "size": "Medium",
+            "validations": null,
+            "type": "Text",
+            "defaultValue": "",
+            "visible": false,
+            "internalName": "creatorUserId",
+            "displayName": "Creator User Id",
+            "value": ""
+        },
+        {
+            "mode": "Edit",
+            "size": "Medium",
+            "validations": null,
+            "type": "DatePicker",
+            "defaultValue": "",
+            "visible": false,
+            "internalName": "lastModificationTime",
+            "displayName": "ERP_LblLastModificationTime",
+            "value": ""
+        },
+        {
+            "mode": "Edit",
+            "size": "Medium",
+            "validations": null,
+            "type": "DatePicker",
+            "defaultValue": "",
+            "visible": false,
+            "internalName": "lastModifierUser",
+            "displayName": "ERP_LblLastModifierUserId",
+            "value": ""
+        },
+        {
+            "mode": "Edit",
+            "size": "Small",
+            "validations": null,
+            "type": "Checkbox",
+            "defaultValue": "",
+            "visible": true,
+            "internalName": "isDeleted",
+            "displayName": "Is Deleted",
+            "value": ""
+        },
+        {
+            "mode": "Edit",
+            "size": "Small",
+            "validations": [],
+            "type": "Text",
+            "defaultValue": "",
+            "visible": false,
+            "internalName": "id",
+            "displayName": "",
+            "value": ""
+        }
+    ]
+}

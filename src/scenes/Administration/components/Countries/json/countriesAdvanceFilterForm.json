@@ -1,0 +1,53 @@
+{
+    "formFields": [
+      {
+        "mode": "Edit",
+        "size": "xSmall",
+        "validations": [
+          {
+            "name": "RequiredFieldValidation",
+            "options": [
+              {
+                "key": "isRequired",
+                "value": false,
+                "validationMessage": "ERP_Error_FieldThisFieldIsRequired"
+              }
+            ]
+          }
+        ],
+        "type": "AutoComplete",
+        "dataItems": [],
+        "defaultValue": "",
+        "visible": true,
+        "componentName": "id",
+        "placeholder": "ERP_LblSearchByName",
+        "selectText": "ERP_LblSearchByName",
+        "dataSource": "GetAllPagedData",
+        "dataTextField": "name",
+        "dataValueField": "id",
+        "preserveItemAfterSelection": true,
+        "parameters": [
+          {
+            "key": "Table",
+            "value": "Countries"
+          },
+          {
+            "key": "SkipCount",
+            "value": 0
+          },
+          {
+            "key": "Sorting",
+            "value": "name ASC"
+          },
+          {
+            "key": "MaxResultCount",
+            "value": 100
+          },
+          {
+            "key":"SelectFields",
+            "value":"Id,FK_countries.ID_CountryTranslation_CoreId_Name_name"
+          }
+        ]
+      }    
+    ]
+  }

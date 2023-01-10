@@ -1,0 +1,42 @@
+{
+    "formFields": [
+      {
+        "mode": "Edit",
+        "size": "xSmall",
+        "validations": null,
+        "type": "AutoComplete",
+        "dataItems": [],
+        "defaultValue": "",
+        "visible": true,
+        "componentName": "Id",
+        "placeholder": "ERP_LblSearchByProgramCategory",
+        "selectText": "ERP_LblSearchByProgramCategory",
+        "dataSource": "GetAllPagedData",
+        "dataTextField": "programCategoryName",
+        "dataValueField": "id",
+        "preserveItemAfterSelection": true,
+        "parameters": [
+          {
+            "key": "Table",
+            "value": "ProgramCategories"
+          },
+          {
+            "key": "SkipCount",
+            "value": 0
+          },
+          {
+            "key": "Sorting",
+            "value": "programCategoryName ASC"
+          },
+          {
+            "key": "MaxResultCount",
+            "value": 500
+          },
+          {
+            "key":"SelectFields",
+            "value":"Id,FK_programCategories.ID_ProgramCategoryTranslation_CoreId_Name_programCategoryName"
+          }          
+        ]
+      }  
+    ]
+  }

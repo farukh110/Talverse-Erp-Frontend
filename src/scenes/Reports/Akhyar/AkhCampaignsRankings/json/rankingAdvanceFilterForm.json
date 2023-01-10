@@ -1,0 +1,76 @@
+{
+  "formFields": [
+    {
+      "mode": "Edit",
+      "size": "xxSmall",
+      "validations": [
+        {
+          "name": "RequiredFieldValidation",
+          "options": [
+            {
+              "key": "isRequired",
+              "value": false,
+              "validationMessage": "ERP_Error_FieldPleaseSelectProduct"
+            }
+          ]
+        }
+      ],
+      "type": "AutoComplete",
+      "dataItems": [],
+      "defaultValue": "",
+      "visible": false,
+      "componentName": "campaignId",
+      "placeholder": "ERP_LblSearchByCampaign",
+      "selectText": "ERP_LblSearchByCampaign",
+      "dataSource": "GetAllPagedData",
+      "dataTextField": "campaignName",
+      "dataValueField": "id",
+      "preserveItemAfterSelection": true,
+      "parameters": [
+        {
+          "key": "Table",
+          "value": "Campaigns"
+        },
+        {
+          "key": "SkipCount",
+          "value": 0
+        },
+        {
+          "key": "Sorting",
+          "value": "campaignName ASC"
+        },
+        {
+          "key": "MaxResultCount",
+          "value": 100
+        },
+        {
+          "key": "SelectFields",
+          "value": "Id,FK_campaigns.ID_CampaignTranslation_CoreId_Name_campaignName"
+        }
+      ]
+    },
+    {
+      "mode": "Edit",
+      "size": "Large",
+      "validations": [
+        {
+          "name": "RequiredFieldValidation",
+          "options": [
+            {
+              "key": "isRequired",
+              "value": true,
+              "validationMessage": "ERP_Error_FieldPleaseSelectUser"
+            }
+          ]
+        }
+      ],
+      "type": "Dropdown",
+      "dataItems": [],
+      "defaultValue": "",
+      "visible": true,
+      "internalName": "supporterId",
+      "displayName": "ERP_LblSelectCampaign",
+      "value": ""
+    }
+  ]
+}

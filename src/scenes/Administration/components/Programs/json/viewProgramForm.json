@@ -1,0 +1,293 @@
+{
+  "formFields": [
+    {
+      "mode": "Edit",
+      "size": "Large",
+      "validations": null,
+      "type": "LanguageTranslation",
+      "defaultValue": "",
+      "visible": true,
+      "internalName": "translations",
+      "displayName": "ERP_LblTranslations",
+      "value": "",
+      "fields": [
+        {
+          "mode": "Edit",
+          "size": "Small",
+          "validations": [
+            {
+              "name": "RequiredFieldValidation",
+              "options": [
+                {
+                  "key": "isRequired",
+                  "value": true,
+                  "validationMessage": "ERP_Error_FieldPleaseEnterProgramName"
+                }
+              ]
+            }
+          ],
+          "type": "Text",
+          "defaultValue": "",
+          "visible": true,
+          "internalName": "name",
+          "displayName": "ERP_LblName",
+          "value": ""
+        },
+        {
+          "mode": "Edit",
+          "size": "Medium",
+          "validations": [
+            {
+              "name": "RequiredFieldValidation",
+              "options": [
+                {
+                  "key": "isRequired",
+                  "value": true,
+                  "validationMessage": "ERP_Error_FieldPleaseEnterDescription"
+                }
+              ]
+            }
+          ],
+          "type": "Multiline",
+          "defaultValue": "",
+          "visible": true,
+          "internalName": "description",
+          "displayName": "ERP_LblDescription",
+          "value": ""
+        }
+      ]
+    },
+    {
+      "mode": "ReadOnly",
+      "size": "Small",
+      "validations": [
+        {
+          "name": "RequiredFieldValidation",
+          "options": [
+            {
+              "key": "isRequired",
+              "value": true,
+              "validationMessage": "Please Select Program Category"
+            }
+          ]
+        }
+      ],
+      "type": "AutoComplete",
+      "dataItems": [],
+      "defaultValue": "",
+      "visible": true,
+      "internalName": "programCategoryId",
+      "componentName": "programCategoryId",
+      "placeholder": "Please Select Program Category",
+      "selectText": "ERP_LblProgramCategory",
+      "dataSource": "GetAllPagedData",
+      "dataTextField": "programCategoryName",
+      "dataValueField": "id",
+      "preserveItemAfterSelection": true,
+      "parameters": [
+        {
+          "key": "Table",
+          "value": "ProgramCategories"
+        },
+        {
+          "key": "SkipCount",
+          "value": 0
+        },
+        {
+          "key": "Sorting",
+          "value": "programCategoryName ASC"
+        },
+        {
+          "key": "MaxResultCount",
+          "value": 500
+        },
+        {
+          "key":"SelectFields",
+          "value":"Id,FK_programCategories.ID_ProgramCategoryTranslation_CoreId_Name_programCategoryName"
+        }
+      ]
+    },
+    {
+      "mode": "ReadOnly",
+      "size": "Small",
+      "validations": [
+        {
+          "name": "RequiredFieldValidation",
+          "options": [
+            {
+              "key": "isRequired",
+              "value": false,
+              "validationMessage": "Please Select Program"
+            }
+          ]
+        }
+      ],
+      "type": "AutoComplete",
+      "dataItems": [],
+      "defaultValue": "",
+      "visible": true,
+      "internalName": "parentProgramId",
+      "componentName": "parentProgramId",
+      "placeholder": "Parent program not selected",
+      "selectText": "ERP_LblParentProgram",
+      "dataSource": "GetAllPagedData",
+      "dataTextField": "programName",
+      "dataValueField": "id",
+      "preserveItemAfterSelection": true,
+      "parameters": [
+        {
+          "key": "Table",
+          "value": "Programs"
+        },
+        {
+          "key": "SkipCount",
+          "value": 0
+        },
+        {
+          "key": "Sorting",
+          "value": "programName ASC"
+        },
+        {
+          "key": "MaxResultCount",
+          "value": 500
+        },
+        {
+          "key":"SelectFields",
+          "value":"Id,FK_programs.ID_ProgramTranslation_CoreId_Name_programName"
+        }
+      ]
+    },
+    {
+      "mode": "Edit",
+      "size": "Small",
+      "validations": [
+        {
+          "name": "RequiredFieldValidation",
+          "options": [
+            {
+              "key": "isRequired",
+              "value": true,
+              "validationMessage": "ERP_Error_FieldPleaseEnterDisplayOrder"
+            }
+          ]
+        }
+      ],
+      "type": "Number",
+      "defaultValue": "",
+      "visible": true,
+      "internalName": "displayOrder",
+      "displayName": "ERP_LblDisplayOrder",
+      "value": ""
+    },
+    {
+      "mode": "Edit",
+      "size": "Small",
+      "validations": [
+        {
+          "name": "RequiredFieldValidation",
+          "options": [
+            {
+              "key": "isRequired",
+              "value": true,
+              "validationMessage": "ERP_Error_FieldPleaseEnterHierarchyLevel"
+            }
+          ]
+        }
+      ],
+      "type": "Number",
+      "defaultValue": "",
+      "visible": true,
+      "internalName": "hierarchyLevel",
+      "displayName": "ERP_LblHierarchyLevel",
+      "value": ""
+    },
+    {
+      "mode": "Edit",
+      "size": "Small",
+      "validations": null,
+      "type": "DatePicker",
+      "defaultValue": "",
+      "visible": true,
+      "internalName": "startDate",
+      "displayName": "ERP_LblStartDate",
+      "value": ""
+    },
+    {
+      "mode": "Edit",
+      "size": "Small",
+      "validations": null,
+      "type": "DatePicker",
+      "defaultValue": "",
+      "visible": true,
+      "internalName": "endDate",
+      "displayName": "ERP_LblEndDate",
+      "value": ""
+    },
+    {
+      "mode": "Edit",
+      "size": "Large",
+      "validations":null,
+      "type": "Multiline",
+      "defaultValue": "",
+      "visible": true,
+      "internalName": "additionalInfo",
+      "displayName": "ERP_LblAdditionalInfo",
+      "value": ""
+    },
+    {
+      "mode": "Edit",
+      "size": "Small",
+      "validations": null,
+      "type": "Checkbox",
+      "defaultValue": "",
+      "visible": true,
+      "internalName": "isActive",
+      "displayName": "ERP_LblIsActive",
+      "value": ""
+    },
+    {
+      "mode": "Edit",
+      "size": "Small",
+      "validations": null,
+      "type": "Checkbox",
+      "defaultValue": "",
+      "visible": true,
+      "internalName": "isFeatured",
+      "displayName": "ERP_LblIsFeatured",
+      "value": ""
+    },
+    {
+      "mode": "Edit",
+      "size": "Small",
+      "validations": null,
+      "type": "Checkbox",
+      "defaultValue": "",
+      "visible": true,
+      "internalName": "isDeleted",
+      "displayName": "ERP_LblIsDelete",
+      "value": ""
+    },
+    {
+      "mode": "Edit",
+      "size": "Small",
+      "validations": null,
+      "type": "DateTimePicker",
+      "defaultValue": "",
+      "visible": true,
+      "internalName": "creationTime",
+      "displayName": "ERP_LblCreatedOn",
+      "value": ""
+    },
+    {
+      "mode": "Edit",
+      "size": "Small",
+      "validations": null,
+      "type": "DateTimePicker",
+      "defaultValue": "",
+      "visible": true,
+      "internalName": "lastModificationTime",
+      "displayName": "ERP_LblLastModificationTime",
+      "value": ""
+    }
+  ]
+}

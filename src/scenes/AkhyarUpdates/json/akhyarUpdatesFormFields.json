@@ -1,0 +1,306 @@
+{
+    "formFields": [
+       
+        {
+            "mode": "Edit",
+            "size": "Large",
+            "validations": null,
+            "type": "LanguageTranslation",
+            "defaultValue": "",
+            "visible": true,
+            "internalName": "translations",
+            "displayName": "ERP_LblTranslations",
+            "value": "",
+            "fields": [
+                {
+                    "mode": "Edit",
+                    "size": "Large",
+                    "validations": [
+                        {
+                            "name": "RequiredFieldValidation",
+                            "options": [
+                                {
+                                    "key": "isRequired",
+                                    "value": false,
+                                    "validationMessage": "ERP_Error_FieldPleaseEnterTitle"
+                                }
+                            ]
+                        }
+                    ],
+                    "type": "Text",
+                    "defaultValue": "",
+                    "visible": true,
+                    "internalName": "pushNotificationTitle",
+                    "displayName": "ERP_LblPushNotificationTitle",
+                    "value": ""
+                },
+                {
+                    "mode": "Edit",
+                    "size": "Large",
+                    "validations": [
+                        {
+                            "name": "RequiredFieldValidation",
+                            "options": [
+                                {
+                                    "key": "isRequired",
+                                    "value": false,
+                                    "validationMessage": "ERP_Error_FieldPleaseEnterTitle"
+                                }
+                            ]
+                        }
+                    ],
+                    "type": "Text",
+                    "defaultValue": "",
+                    "visible": false,
+                    "internalName": "title",
+                    "displayName": "ERP_LblCampaignAppUpdateTitle",
+                    "value": ""
+                },
+                {
+                    "mode": "Edit",
+                    "size": "Large",
+                    "validations": [
+                        {
+                            "name": "RequiredFieldValidation",
+                            "options": [
+                                {
+                                    "key": "isRequired",
+                                    "value": true,
+                                    "validationMessage": "ERP_Error_FieldPleaseEnterDescription"
+                                }
+                            ]
+                        }
+                    ],
+                    "type": "Multiline",
+                    "defaultValue": "",
+                    "visible": true,
+                    "internalName": "description",
+                    "displayName": "ERP_LblMessage",
+                    "value": ""
+                }
+            ]
+        },
+        {
+            "mode": "Edit",
+            "size": "Medium",
+            "validations": null,
+            "type": "Checkbox",
+            "defaultValue": true,
+            "visible": true,
+            "internalName": "isCampaignSpecificNotification",
+            "displayName": "ERP_LblSendToCampaignParticipantsOnly",
+            "value": ""
+        },
+        {
+            "mode": "Edit",
+            "size": "Large",
+            "validations": [],
+            "type": "AutoComplete",
+            "dataItems": [],
+            "defaultValue": "",
+            "visible": true,
+            "componentName": "campaignId",
+            "placeholder": "ERP_LblSelectCampaign",
+            "selectText": "ERP_LblCampaignNotification",
+            "dataSource": "GetAllPagedData",
+            "dataTextField": "campaignName",
+            "dataValueField": "id",
+            "preserveItemAfterSelection": true,
+            "parameters": [
+                {
+                    "key": "Table",
+                    "value": "Campaigns"
+                },
+                {
+                    "key": "SkipCount",
+                    "value": 0
+                },
+                {
+                    "key": "Sorting",
+                    "value": "campaignName ASC"
+                },
+                {
+                    "key": "MaxResultCount",
+                    "value": 1000
+                },
+                {
+                    "key": "SelectFields",
+                    "value": "Id,FK_campaigns.ID_CampaignTranslation_CoreId_Name_campaignName"
+                },
+                {
+                    "key": "QueryFilters",
+                    "value": {
+                        "fieldName": "",
+                        "operator": "AND",
+                        "filters": [
+                            {
+                                "fieldName": "isDeleted",
+                                "operator": "=",
+                                "value": false
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "mode": "Edit",
+            "size": "Large",
+            "validations": [
+                {
+                    "name": "RequiredFieldValidation",
+                    "options": [
+                        {
+                            "key": "isRequired",
+                            "value": false,
+                            "validationMessage": "ERP_Error_FieldRecipients"
+                        }
+                    ]
+                }
+            ],
+            "selectFirstItemAsDefault": true,
+            "type": "AutoComplete",
+            "dataItems": [],
+            "defaultValue": "",
+            "visible": false,
+            "componentName": "notificationRecipients",
+            "placeholder": "ERP_LblNotificationRecipients",
+            "selectText": "ERP_LblSelectRecipients",
+            "selectorMode": "multiple",
+            "dataSource": "GetAllNonDonorSupporters",
+            "dataTextField": "name",
+            "dataValueField": "userId",
+            "preserveItemAfterSelection": true,
+            "selectedValues":[],
+            "parameters": []
+        },
+        {
+            "mode": "Edit",
+            "size": "Medium",
+            "validations": [
+                {
+                    "name": "RequiredFieldValidation",
+                    "options": [
+                        {
+                            "key": "isRequired",
+                            "value": true,
+                            "validationMessage": "ERP_Error_FieldPleaseSelectAppUpdateType"
+                        }
+                    ]
+                }
+            ],
+            "selectFirstItemAsDefault": true,
+            "type": "AutoComplete",
+            "dataItems": [],
+            "defaultValue": "",
+            "visible": true,
+            "componentName": "appUpdateTypeId",
+            "placeholder": "ERP_LblSelectUpdateType",
+            "selectText": "ERP_LblType",
+            "dataSource": "GetAllPagedData",
+            "dataTextField": "typeCode",
+            "dataValueField": "id",
+            "preserveItemAfterSelection": true,
+            "parameters": [
+                {
+                    "key": "Table",
+                    "value": "AppUpdateTypes"
+                },
+                {
+                    "key": "SkipCount",
+                    "value": 0
+                },
+                {
+                    "key": "Sorting",
+                    "value": "TypeCode ASC"
+                },
+                {
+                    "key": "MaxResultCount",
+                    "value": 1000
+                },
+                {
+                    "key": "SelectFields",
+                    "value": "Id,TypeCode"
+                },
+                {
+                    "key": "QueryFilters",
+                    "value": {
+                        "fieldName": "",
+                        "operator": "AND",
+                        "filters": [
+                            {
+                                "fieldName": "Level",
+                                "operator": "=",
+                                "value": "Custom"
+                            },
+                            {
+                                "fieldName": "isDeleted",
+                                "operator": "=",
+                                "value": false
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "mode": "Edit",
+            "size": "xSmall",
+            "validations": [
+                {
+                    "name": "RequiredFieldValidation",
+                    "options": [
+                        {
+                            "key": "isRequired",
+                            "value": true,
+                            "validationMessage": "ERP_Error_FieldThisFieldIsRequired"
+                        }
+                    ]
+                }
+            ],
+            "type": "Dropdown",
+            "dataItems": [
+                {
+                    "key": "Pdf",
+                    "value": "Pdf"
+                },
+                {
+                    "key": "image",
+                    "value": "Image"
+                },
+                {
+                    "key": "email",
+                    "value": "Email"
+                }
+            ],
+            "defaultValue": "",
+            "visible": false,
+            "internalName": "landingType",
+            "displayName": "ERP_LblLandingType",
+            "value": ""
+            
+        },
+        {
+            "mode": "Edit",
+            "size": "xSmall",
+            "validations": null,
+            "type": "Checkbox",
+            "defaultValue": null,
+            "visible": true,
+            "internalName": "saveAppUpdate",
+            "displayName": "ERP_LblSaveAppUpdate",
+            "value": ""
+        },
+        {
+            "mode": "Edit",
+            "size": "xSmall",
+            "validations": null,
+            "type": "Checkbox",
+            "defaultValue": null,
+            "visible": true,
+            "internalName": "sendNotificationNow",
+            "displayName": "ERP_LblSendImmediately",
+            "value": ""
+        }
+    ]
+}

@@ -1,0 +1,210 @@
+{
+  "formFields": [
+    {
+      "mode": "Edit",
+      "size": "xSmall",
+      "validations": [
+        {
+          "name": "RequiredFieldValidation",
+          "options": [
+            {
+              "key": "isRequired",
+              "value": true,
+              "validationMessage": "ERP_Error_FieldPleaseSelectForm"
+            }
+          ]
+        }
+      ],
+      "type": "Dropdown",
+      "dataItems": [],
+      "defaultValue": "",
+      "visible": true,
+      "internalName": "formId",
+      "displayName": "ERP_LblForm",
+      "value": ""
+    },
+    {
+      "mode": "Edit",
+      "size": "xSmall",
+      "validations": [
+        {
+          "name": "RequiredFieldValidation",
+          "options": [
+            {
+              "key": "isRequired",
+              "value": true,
+              "validationMessage": "ERP_Error_FieldPleaseEnterOrderDate"
+            }
+          ]
+        }
+      ],
+      "type": "DatePicker",
+      "defaultValue": "",
+      "visible": true,
+      "internalName": "orderDate",
+      "displayName": "ERP_LblOrderDate",
+      "value": ""
+    },
+    {
+      "mode": "Edit",
+      "size": "xSmall",
+      "validations": [
+        {
+          "name": "RequiredFieldValidation",
+          "options": [
+            {
+              "key": "isRequired",
+              "value": true,
+              "validationMessage": "ERP_Error_FieldPleaseSelectUser"
+            }
+          ]
+        }
+      ],
+      "type": "Dropdown",
+      "dataItems": [],
+      "defaultValue": "",
+      "visible": true,
+      "internalName": "supporterId",
+      "displayName": "ERP_LblRepName",
+      "value": ""
+    },
+    {
+      "mode": "Edit",
+      "size": "xSmall",
+      "validations": null,
+      "type": "Dropdown",
+      "dataItems": [],
+      "defaultValue": "",
+      "visible": true,
+      "internalName": "donorId",
+      "displayName": "ERP_LblDonor",
+      "value": ""
+    },
+    {
+      "mode": "Edit",
+      "size": "xSmall",
+      "validations": [
+        {
+          "name": "RequiredFieldValidation",
+          "options": [
+            {
+              "key": "isRequired",
+              "value": true,
+              "validationMessage": "ERP_Error_FieldPleaseSelectSupporter"
+            }
+          ]
+        }
+      ],
+      "type": "Text",
+      "defaultValue": "",
+      "visible": true,
+      "internalName": "donorName",
+      "displayName": "ERP_LblDonorName",
+      "value": ""
+    },
+    {
+      "mode": "Edit",
+      "size": "xSmall",
+      "validations": [
+        {
+          "name": "PhoneNumberValidation",
+          "options": [
+            {
+              "key": "isEnabled",
+              "value": true,
+              "validationMessage": "ERP_Error_FieldValidContactNumber"
+            }
+          ]
+        },
+        {
+          "name": "RequiredFieldValidation",
+          "options": [
+            {
+              "key": "isRequired",
+              "value": false,
+              "validationMessage": "ERP_Error_FieldValidContactNumber"
+            }
+          ]
+        }
+      ],
+      "defaultCountry": "US",
+      "type": "CustomPhone",
+      "defaultValue": "",
+      "visible": true,
+      "internalName": "donorContact",
+      "displayName": "ERP_LblDonorContactNumber",
+      "value": "id"
+    },
+    {
+      "mode": "Edit",
+      "size": "xSmall",
+      "validations": [
+        {
+          "name": "RequiredFieldValidation",
+          "options": [
+            {
+              "key": "isRequired",
+              "value": false,
+              "validationMessage": "ERP_Error_FieldDonorCountry"
+            }
+          ]
+        }
+      ],
+      "type": "AutoComplete",
+      "dataItems": [],
+      "defaultValue": "",
+      "visible": false,
+      "componentName": "countryId",
+      "placeholder": "ERP_LblSearchByCountry",
+      "selectText": "ERP_LblDonorCountry",
+      "dataSource": "GetAllPagedData",
+      "dataTextField": "countryName",
+      "dataValueField": "id",
+      "preserveItemAfterSelection": true,
+      "parameters": [
+        {
+          "key": "Table",
+          "value": "Countries"
+        },
+        {
+          "key": "SkipCount",
+          "value": 0
+        },
+        {
+          "key": "Sorting",
+          "value": "countryName ASC"
+        },
+        {
+          "key": "MaxResultCount",
+          "value": 100
+        },
+        {
+          "key": "SelectFields",
+          "value": "Id,Code,FK_countries.ID_CountryTranslation_CoreId_Name_countryName"
+        }
+      ]
+    },
+    {
+      "mode": "Edit",
+      "size": "xSmall",
+      "validations": [],
+      "type": "Text",
+      "defaultValue": "",
+      "visible": false,
+      "internalName": "nameOnReceipt",
+      "displayName": "ERP_LblNameOnReceipt",
+      "value": ""
+    },
+    {
+      "mode": "Edit",
+      "size": "Large",
+      "type": "CustomSubForm",
+      "dataItems": [],
+      "defaultValue": "",
+      "visible": true,
+      "internalName": "subFormsId",
+      "displayName": "ERP_HdrDonationDetails",
+      "value": ""
+    }
+  ]
+}

@@ -1,0 +1,72 @@
+{
+    "formFields": [
+        {
+            "mode": "Edit",
+            "size": "Medium",
+            "validations": null,
+            "type": "Text",
+            "defaultValue": null,
+            "visible": true,
+            "internalName": "name",
+            "displayName": "ERP_LblName",
+            "value": ""
+        },
+        {
+            "mode": "Edit",
+            "size": "Medium",
+            "validations": null,
+            "type": "Text",
+            "defaultValue": null,
+            "visible": true,
+            "internalName": "contactNumber",
+            "displayName": "ERP_LblContactNumber",
+            "value": ""
+        },
+        {
+            "mode": "Edit",
+            "size": "Medium",
+            "validations": null,
+            "type": "Text",
+            "defaultValue": null,
+            "visible": true,
+            "internalName": "email",
+            "displayName": "ERP_LblEmailAddress",
+            "value": ""
+        },
+        {
+            "mode": "Edit",
+            "size": "Medium",
+            "validations": null,
+            "type": "Dropdown",
+            "dataItems": [],
+            "defaultValue": null,
+            "visible": true,
+            "internalName": "country",
+            "displayName": "ERP_LblCountry",
+            "value": ""
+        },
+        {
+            "mode": "Edit",
+            "size": "Medium",
+            "validations": null,
+            "dataItems": [{ "key": "Female", "value": "ERP_LblFemale" }, { "key": "Male", "value": "ERP_LblMale" }],
+            "type": "Dropdown",
+            "defaultValue": null,
+            "visible": true,
+            "internalName": "gender",
+            "displayName": "ERP_LblGender",
+            "value": ""
+        },
+        {
+            "mode": "Edit",
+            "size": "Medium",
+            "validations": null,
+            "type": "DatePicker",
+            "defaultValue": null,
+            "visible": true,
+            "internalName": "dateOfBirth",
+            "displayName": "ERP_LblDateOfBirth",
+            "value": ""
+        }
+    ]
+}

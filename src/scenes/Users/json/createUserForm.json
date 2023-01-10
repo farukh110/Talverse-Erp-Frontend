@@ -1,0 +1,181 @@
+{
+  "formFields": [
+    {
+      "mode": "Edit",
+      "size": "Small",
+      "validations": [
+        {
+          "name": "RequiredFieldValidation",
+          "options": [
+            {
+              "key": "isRequired",
+              "value": true,
+              "validationMessage": "ERP_Error_FieldPleaseEnterName"
+            }
+          ]
+        }
+      ],
+      "type": "Text",
+      "defaultValue": "",
+      "visible": true,
+      "internalName": "name",
+      "displayName": "ERP_LblName",
+      "value": ""
+    },
+    {
+      "mode": "Edit",
+      "size": "Small",
+      "validations": [
+        {
+          "name": "RequiredFieldValidation",
+          "options": [
+            {
+              "key": "isRequired",
+              "value": true,
+              "validationMessage": "ERP_Error_FieldPleaseEnterSurname"
+            }
+          ]
+        }
+      ],
+      "type": "Text",
+      "defaultValue": "",
+      "visible": true,
+      "internalName": "surname",
+      "displayName": "ERP_LblSurname",
+      "value": ""
+    },
+    {
+      "mode": "Edit",
+      "size": "Small",
+      "validations": [
+        {
+          "name": "RequiredFieldValidation",
+          "options": [
+            {
+              "key": "isRequired",
+              "value": true,
+              "validationMessage": "ERP_Error_FieldPleaseEnterUserName"
+            }
+          ]
+        }
+      ],
+      "type": "Text",
+      "defaultValue": "",
+      "visible": true,
+      "internalName": "userName",
+      "displayName": "ERP_LblUserName",
+      "value": ""
+    },
+    {
+      "mode": "Edit",
+      "size": "Small",
+      "validations": [
+        {
+          "name": "RequiredFieldValidation",
+          "options": [
+            {
+              "key": "isRequired",
+              "value": true,
+              "validationMessage": "ERP_Error_FieldPleaseEnterEmail"
+            }
+          ]
+        },
+        {
+          "name": "EmailValidator",
+          "options": [
+            {
+              "key": "type",
+              "value": "email",
+              "validationMessage": "ERP_Error_FieldValidEmail"
+            }
+          ]
+        }
+      ],
+      "type": "Text",
+      "defaultValue": "",
+      "visible": true,
+      "internalName": "emailAddress",
+      "displayName": "ERP_LblEmailAddress",
+      "value": ""
+    },
+    {
+      "mode": "Edit",
+      "size": "Small",
+      "validations": [
+        {
+          "name": "RequiredFieldValidation",
+          "options": [
+            {
+              "key": "isRequired",
+              "value": true,
+              "validationMessage": "ERP_Error_FieldPleaseEnterPassword"
+            }
+          ]
+        }
+      ],
+      "type": "Password",
+      "defaultValue": "",
+      "visible": true,
+      "internalName": "password",
+      "displayName": "ERP_LblPassword",
+      "value": ""
+    },
+    {
+      "mode": "Edit",
+      "size": "Small",
+      "validations": [
+        {
+          "name": "RequiredFieldValidation",
+          "options": [
+            {
+              "key": "isRequired",
+              "value": true,
+              "validationMessage": "ERP_Error_FieldPleaseEnterConfirmPassword"
+            }
+          ]
+        },
+        {
+          "name": "CompareValueValidation",
+          "options": [
+            {
+              "key": "fieldToCompare",
+              "value": "password",
+              "validationMessage": "ERP_Error_FieldPTwoPasswordsDoNotMatch"
+            }
+          ]
+        }
+      ],
+      "dynamicLogics": null,
+      "type": "Password",
+      "defaultValue": "",
+      "visible": true,
+      "internalName": "confirm",
+      "displayName": "ERP_LblConfirmPassword",
+      "value": ""
+    },
+    {
+      "mode": "Edit",
+      "size": "Medium",
+      "validations": null,
+      "type": "Checkbox",
+      "defaultValue": "",
+      "visible": true,
+      "internalName": "isActive",
+      "displayName": "ERP_LblIsActive",
+      "value": ""
+    },
+    {
+      "mode": "Edit",
+      "size": "Large",
+      "dataItems": [],
+      "validations": null,
+      "dynamicLogics": null,
+      "type": "CheckboxGroup",
+      "defaultValue": "",
+      "visible": true,
+      "internalName": "roleNames",
+      "displayName": "ERP_LblRoles",
+      "value": ""
+    }
+  ]
+}

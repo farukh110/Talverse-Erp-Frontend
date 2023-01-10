@@ -1,0 +1,125 @@
+{
+    "formFields": [
+        {
+            "mode": "Edit",
+            "size": "Large",
+            "validations": null,
+            "type": "LanguageTranslation",
+            "defaultValue": "",
+            "visible": true,
+            "internalName": "translations",
+            "displayName": "ERP_LblTranslations",
+            "value": "",
+            "fields": [
+                {
+                    "mode": "ReadOnly",
+                    "size": "Medium",
+                    "validations": null,
+                    "type": "Text",
+                    "defaultValue": "",
+                    "visible": true,
+                    "internalName": "name",
+                    "displayName": "ERP_LblTransferPointName",
+                    "value": ""
+                },
+                {
+                    "mode": "ReadOnly",
+                    "size": "Medium",
+                    "validations": null,
+                    "type": "Text",
+                    "defaultValue": "",
+                    "visible": true,
+                    "internalName": "description",
+                    "displayName": "ERP_LblDescription",
+                    "value": ""
+                }
+            ]
+        },
+        {
+            "mode": "ReadOnly",
+            "size": "Small",
+            "validations": null,
+            "type": "Text",
+            "defaultValue": "",
+            "visible": true,
+            "internalName": "code",
+            "displayName": "ERP_LblCode",
+            "value": ""
+        },
+        {
+            "mode": "ReadOnly",
+            "size": "Small",
+            "validations": [
+                {
+                    "name": "RequiredFieldValidation",
+                    "options": [
+                        {
+                            "key": "isRequired",
+                            "value": true,
+                            "validationMessage": "ERP_Error_FieldThisFieldIsRequired"
+                        }
+                    ]
+                }
+            ],
+            "type": "AutoComplete",
+            "dataItems": [],
+            "defaultValue": "",
+            "visible": true,
+            "internalName": "transferPointTypeId",
+            "componentName": "transferPointId",
+            "placeholder": "Please Select Type",
+            "selectText": "ERP_LblType",
+            "dataSource": "GetAllPagedData",
+            "dataTextField": "transferPointTypeName",
+            "dataValueField": "id",
+            "preserveItemAfterSelection": true,
+            "parameters": [
+                {
+                    "key": "Table",
+                    "value": "TransferPointTypes"
+                },
+                {
+                    "key": "SkipCount",
+                    "value": 0
+                },
+                {
+                    "key": "Sorting",
+                    "value": "code ASC"
+                },
+                {
+                    "key": "MaxResultCount",
+                    "value": 500
+                },
+                {
+                    "key": "SelectFields",
+                    "value": "Id,FK_transferPointTypes.id_TransferPointTypeTranslation_CoreId_Name_transferPointTypeName"
+                },
+                {
+                    "key": "QueryFilters",
+                    "value": {
+                        "fieldName": "",
+                        "operator": "AND",
+                        "filters": [
+                            {
+                                "fieldName": "isDeleted",
+                                "operator": "=",
+                                "value": false
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "mode": "Edit",
+            "size": "Small",
+            "validations": null,
+            "type": "Checkbox",
+            "defaultValue": "",
+            "visible": true,
+            "internalName": "isDeleted",
+            "displayName": "ERP_LblIsDeleted",
+            "value": ""
+        }
+    ]
+}

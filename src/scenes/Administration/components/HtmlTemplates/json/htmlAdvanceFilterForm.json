@@ -1,0 +1,41 @@
+{
+  "formFields": [
+    {
+      "mode": "Edit",
+      "size": "xSmall",
+      "validations": [
+        {
+          "name": "RequiredFieldValidation",
+          "options": [
+            {
+              "key": "isRequired",
+              "value": false,
+              "validationMessage": "ERP_Error_FieldThisFieldIsRequired"
+            }
+          ]
+        }
+      ],
+      "type": "Dropdown",
+      "dataItems": [
+        {
+          "key": "pdf",
+          "value": "PDF"
+        },
+        {
+          "key": "image",
+          "value": "Image"
+        },
+        {
+          "key": "email",
+          "value": "Email"
+        }
+      ],
+      "defaultValue": "",
+      "visible": true,
+      "componentName": "type",
+      "placeholder": "ERP_LblSearchByType",
+      "internalName": "type",
+      "displayName": "ERP_LblSearchByType"
+    }
+  ]
+}

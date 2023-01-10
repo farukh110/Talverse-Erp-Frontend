@@ -1,0 +1,54 @@
+.all-content-wrapper{
+    .item-link{
+        margin-right: 10px;
+    }
+
+    .ant-card-body
+    {
+        padding-top: 40px;
+    }
+
+    .column-view
+    {
+        background: #fdf9fa;
+        padding: 15px;
+        border: 1px dashed @secondary-color;
+        transition: all 0.3s;
+        height: 140px;
+
+        a {
+            font-weight: 500;
+        }
+
+        &:hover
+        {
+            background: @secondary-color;
+            border: 1px dashed @secondary-color;
+            color: #fff;
+
+            a,h4 {
+                color: #fff;
+            }
+
+            .badge-green
+            {
+                .ant-badge-count
+              {
+                 background: #fff; 
+                 color: @secondary-color; 
+              }
+            }
+
+        }
+    }
+
+    .badge-green
+    {
+        float: right;
+
+        .ant-badge-count
+        {
+            background: @secondary-color; 
+        } 
+    }
+}

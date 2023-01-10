@@ -1,0 +1,391 @@
+{
+  "formFields": [
+    {
+      "mode": "Edit",
+      "size": "Large",
+      "validations": null,
+      "type": "LanguageTranslation",
+      "defaultValue": "",
+      "visible": true,
+      "internalName": "translations",
+      "displayName": "ERP_LblTranslations",
+      "value": "",
+      "fields": [
+        {
+          "mode": "Edit",
+          "size": "Small",
+          "validations": [
+            {
+              "name": "RequiredFieldValidation",
+              "options": [
+                {
+                  "key": "isRequired",
+                  "value": true,
+                  "validationMessage": "ERP_Error_FieldThisFieldIsRequired"
+                }
+              ]
+            }
+          ],
+          "type": "Text",
+          "defaultValue": "",
+          "visible": true,
+          "internalName": "name",
+          "displayName": "ERP_LblName",
+          "value": ""
+        },        
+        {
+          "mode": "Edit",
+          "size": "Small",
+          "validations": [
+            {
+              "name": "RequiredFieldValidation",
+              "options": [
+                {
+                  "key": "isRequired",
+                  "value": true,
+                  "validationMessage": "ERP_Error_FieldThisFieldIsRequired"
+                }
+              ]
+            }
+          ],
+          "type": "Text",
+          "defaultValue": "",
+          "visible": true,
+          "internalName": "unitNameSingular",
+          "displayName": "ERP_LblUnitNameSingular",
+          "value": ""
+        },
+        {
+          "mode": "Edit",
+          "size": "Small",
+          "validations": [
+            {
+              "name": "RequiredFieldValidation",
+              "options": [
+                {
+                  "key": "isRequired",
+                  "value": true,
+                  "validationMessage": "ERP_Error_FieldThisFieldIsRequired"
+                }
+              ]
+            }
+          ],
+          "type": "Text",
+          "defaultValue": "",
+          "visible": true,
+          "internalName": "unitNamePlural",
+          "displayName": "ERP_LblUnitNamePlural",
+          "value": ""
+        },
+        {
+          "mode": "Edit",
+          "size": "Small",
+          "validations": [],
+          "type": "Text",
+          "defaultValue": "",
+          "visible": false,
+          "internalName": "id",
+          "displayName": "ERP_LblUnitNamePlural",
+          "value": ""
+        },
+        {
+          "mode": "Edit",
+          "size": "Large",
+          "validations": [
+            {
+              "name": "RequiredFieldValidation",
+              "options": [
+                {
+                  "key": "isRequired",
+                  "value": true,
+                  "validationMessage": "ERP_Error_FieldThisFieldIsRequired"
+                }
+              ]
+            }
+          ],
+          "type": "Multiline",
+          "defaultValue": "",
+          "visible": true,
+          "internalName": "description",
+          "displayName": "ERP_LblDescription",
+          "value": ""
+        },
+        {
+          "mode": "Edit",
+          "size": "Small",
+          "validations": [],
+          "type": "Text",
+          "defaultValue": "",
+          "visible": false,
+          "internalName": "id",
+          "displayName": "",
+          "value": ""
+        }
+      ]
+    },
+    {
+      "mode": "Edit",
+      "size": "xSmall",
+      "validations": [
+        {
+          "name": "RequiredFieldValidation",
+          "options": [
+            {
+              "key": "isRequired",
+              "value": false,
+              "validationMessage": "ERP_Error_FieldThisFieldIsRequired"
+            }
+          ]
+        }
+      ],
+      "type": "AutoComplete",
+      "dataItems": [],
+      "defaultValue": "",
+      "visible": true,
+      "internalName": "appId",
+      "componentName": "appId",
+      "placeholder": "ERP_LblSelectApp",
+      "selectText": "ERP_LblApp",
+      "dataSource": "GetAllPagedData",
+      "dataTextField": "appName",
+      "dataValueField": "id",
+      "preserveItemAfterSelection": true,
+      "parameters": [
+        {
+          "key": "Table",
+          "value": "Apps"
+        },
+        {
+          "key": "SkipCount",
+          "value": 0
+        },
+        {
+          "key": "Sorting",
+          "value": "appName ASC"
+        },
+        {
+          "key": "MaxResultCount",
+          "value": 100
+        },
+        {
+          "key":"SelectFields",
+
+          "value":"Id,FK_Apps.ID_AppTranslation_CoreId_Name_appName"
+        },
+        {
+          "key": "QueryFilters",
+          "value": {
+            "fieldName":"",
+            "operator":"AND",
+            "filters": [
+            {
+              "fieldName":"isDeleted",
+              "operator":"=",
+              "value": false
+            },
+            {
+              "fieldName":"Code",
+              "operator":"!=",
+              "value": "ERPPortal"
+            }] 
+          }
+        }
+      ]
+    },
+    {
+      "mode": "Edit",
+      "size": "xSmall",
+      "validations": [
+        {
+          "name": "RequiredFieldValidation",
+          "options": [
+            {
+              "key": "isRequired",
+              "value": true,
+              "validationMessage": "ERP_Error_FieldThisFieldIsRequired"
+            }
+          ]
+        }
+      ],
+      "type": "AutoComplete",
+      "dataItems": [],
+      "defaultValue": "",
+      "visible": true,
+      "internalName": "programId",
+      "componentName": "programId",
+      "placeholder": "Please Select Program",
+      "selectText": "ERP_LblProgram",
+      "dataSource": "GetAllPagedData",
+      "dataTextField": "programName",
+      "dataValueField": "id",
+      "preserveItemAfterSelection": true,
+      "parameters": [
+        {
+          "key": "Table",
+          "value": "Programs"
+        },
+        {
+          "key": "SkipCount",
+          "value": 0
+        },
+        {
+          "key": "Sorting",
+          "value": "programName ASC"
+        },
+        {
+          "key": "MaxResultCount",
+          "value": 500
+        },
+        {
+          "key":"SelectFields",
+          "value":"Id,FK_programs.ID_ProgramTranslation_CoreId_Name_programName"
+        },
+        {
+          "key": "QueryFilters",
+          "value": {
+            "fieldName":"",
+            "operator":"AND",
+            "filters": [
+            {
+              "fieldName":"isDeleted",
+              "operator":"=",
+              "value": false
+            }] 
+          }
+        }
+      ]
+    },
+    {
+      "mode": "Edit",
+      "size": "xSmall",
+      "validations": [
+        {
+          "name": "RequiredFieldValidation",
+          "options": [
+            {
+              "key": "isRequired",
+              "value": true,
+              "validationMessage": "ERP_Error_FieldThisFieldIsRequired"
+            }
+          ]
+        }
+      ],
+      "type": "Number",
+      "defaultValue": "",
+      "visible": true,
+      "internalName": "displayOrder",
+      "displayName": "ERP_LblDisplayOrder",
+      "value": ""
+    },
+    {
+      "mode": "Edit",
+      "size": "xSmall",
+      "validations": [
+        {
+          "name": "RequiredFieldValidation",
+          "options": [
+            {
+              "key": "isRequired",
+              "value": true,
+              "validationMessage": "ERP_Error_FieldThisFieldIsRequired"
+            }
+          ]
+        }
+      ],
+      "type": "Text",
+      "defaultValue": "",
+      "visible": true,
+      "internalName": "code",
+      "displayName": "ERP_LblProductCode",
+      "value": ""
+    },
+    {
+      "mode": "Edit",
+      "size": "xxSmall",
+      "validations": null,
+      "type": "Checkbox",
+      "defaultValue": "",
+      "visible": true,
+      "internalName": "isActive",
+      "displayName": "ERP_LblIsProductActive",
+      "value": ""
+    },
+    {
+      "mode": "Edit",
+      "size": "xxSmall",
+      "validations": null,
+      "type": "Checkbox",
+      "defaultValue": "",
+      "visible": true,
+      "internalName": "isAllowedInCampaign",
+      "displayName": "ERP_LblIsAllowedInCampaign",
+      "value": ""
+    },
+    {
+      "mode": "Edit",
+      "size": "xxSmall",
+      "validations": null,
+      "type": "Checkbox",
+      "defaultValue": "",
+      "visible": true,
+      "internalName": "isFeatured",
+      "displayName": "ERP_LblIsFeatured",
+      "value": ""
+    },
+    {
+      "mode": "Edit",
+      "size": "xxSmall",
+      "validations": null,
+      "type": "Checkbox",
+      "defaultValue": "",
+      "visible": true,
+      "internalName": "isSupporterNameRequired",
+      "displayName": "ERP_LblIsSupporterNameRequired",
+      "value": ""
+    },
+    {
+      "mode": "Edit",
+      "size": "xxSmall",
+      "validations": null,
+      "type": "Checkbox",
+      "defaultValue": "",
+      "visible": true,
+      "internalName": "isDeleted",
+      "displayName": "ERP_LblIsDelete",
+      "value": ""
+    },
+    {
+      "mode": "Edit",
+      "size": "xSmall",
+      "validations": null,
+      "type": "Text",
+      "defaultValue": "",
+      "visible": false,
+      "internalName": "lastModifierUserId",
+      "displayName": "Modify By",
+      "value": ""
+    },
+    {
+      "mode": "Edit",
+      "size": "Small",
+      "validations": null,
+      "type": "Text",
+      "defaultValue": "",
+      "visible": false,
+      "internalName": "lastModificationTime",
+      "displayName": "Last Modify On",
+      "value": ""
+    },
+    {
+      "mode": "Edit",
+      "size": "Small",
+      "validations": [],
+      "type": "Text",
+      "defaultValue": "",
+      "visible": false,
+      "internalName": "id",
+      "displayName": "",
+      "value": ""
+    }
+  ]
+}

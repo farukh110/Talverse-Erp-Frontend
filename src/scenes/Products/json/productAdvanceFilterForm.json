@@ -1,0 +1,171 @@
+{
+    "formFields": [
+      {
+        "mode": "Edit",
+        "size": "xSmall",
+        "validations": null,
+        "type": "AutoComplete",
+        "dataItems": [],
+        "defaultValue": "",
+        "visible": true,
+        "componentName": "programId",
+        "placeholder": "ERP_LblSearchByProgram",
+        "selectText": "ERP_LblSearchByProgram",
+        "dataSource": "GetAllPagedData",
+        "dataTextField": "programName",
+        "dataValueField": "id",
+        "preserveItemAfterSelection": true,
+        "parameters": [
+          {
+            "key": "Table",
+            "value": "Programs"
+          },
+          {
+            "key": "SkipCount",
+            "value": 0
+          },
+          {
+            "key": "Sorting",
+            "value": "ProgramName ASC"
+          },
+          {
+            "key": "MaxResultCount",
+            "value": 100
+          },
+          {
+            "key":"SelectFields",
+            "value":"Id,FK_programs.ID_ProgramTranslation_CoreId_Name_programName"
+          },
+          {
+            "key": "QueryFilters",
+            "value": {
+              "fieldName":"",
+              "operator":"AND",
+              "filters": [{
+                "fieldName":"isActive",
+                "operator":"=",
+                "value": true
+              },
+              {
+                "fieldName":"isDeleted",
+                "operator":"=",
+                "value": false
+              }] 
+            }
+          }
+        ]
+      },
+      {
+        "mode": "Edit",
+        "size": "xSmall",
+        "validations": null,
+        "type": "AutoComplete",
+        "dataItems": [],
+        "defaultValue": "",
+        "visible": true,
+        "componentName": "id",
+        "placeholder": "ERP_LblSearchByProduct",
+        "selectText": "ERP_LblSearchByProduct",
+        "dataSource": "GetAllPagedData",
+        "dataTextField": "productName",
+        "dataValueField": "id",
+        "preserveItemAfterSelection": true,
+        "parameters": [
+          {
+            "key": "Table",
+            "value": "Products"
+          },
+          {
+            "key": "SkipCount",
+            "value": 0
+          },
+          {
+            "key": "Sorting",
+            "value": "productName ASC"
+          },
+          {
+            "key": "MaxResultCount",
+            "value": 100
+          },
+          {
+            "key":"SelectFields",
+            "value":"Id,DisplayOrder,FK_products.ID_ProductTranslation_CoreId_Name_productName"
+          },
+          {
+            "key": "QueryFilters",
+            "value": {
+              "fieldName":"",
+              "operator":"AND",
+              "filters": [{
+                "fieldName":"isActive",
+                "operator":"=",
+                "value": true
+              },
+              {
+                "fieldName":"isDeleted",
+                "operator":"=",
+                "value": false
+              }] 
+            }
+          }
+        ]
+      },
+      {
+        "mode": "Edit",
+        "size": "xSmall",
+        "validations": null,
+        "type": "AutoComplete",
+        "dataItems": [],
+        "defaultValue": "",
+        "visible": true,
+        "componentName": "appId",
+        "placeholder": "ERP_LblSearchByApp",
+        "selectText": "ERP_LblSearchByApp",
+        "dataSource": "GetAllPagedData",
+        "dataTextField": "appName",
+        "dataValueField": "id",
+        "preserveItemAfterSelection": true,
+        "parameters": [
+          {
+            "key": "Table",
+            "value": "Apps"
+          },
+          {
+            "key": "SkipCount",
+            "value": 0
+          },
+          {
+            "key": "Sorting",
+            "value": "appName ASC"
+          },
+          {
+            "key": "MaxResultCount",
+            "value": 100
+          },
+          {
+            "key":"SelectFields",
+
+            "value":"Id,FK_Apps.ID_AppTranslation_CoreId_Name_appName"
+          },
+          {
+            "key": "QueryFilters",
+            "value": {
+              "fieldName":"",
+              "operator":"AND",
+              "filters": [
+              {
+                "fieldName":"isDeleted",
+                "operator":"=",
+                "value": false
+              },
+              {
+                "fieldName":"Code",
+                "operator":"!=",
+                "value": "ERPPortal"
+              }] 
+            }
+          }
+        ]
+      }    
+    ]
+  }

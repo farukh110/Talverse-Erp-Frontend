@@ -1,0 +1,26 @@
+{
+    "formFields": [
+        {
+            "mode": "Edit",
+            "size": "Large",
+            "validations": [
+                {
+                    "name": "RequiredFieldValidation",
+                    "options": [
+                        {
+                            "key": "isRequired",
+                            "value": true,
+                            "validationMessage": "ERP_Error_FieldThisFieldIsRequired"
+                        }
+                    ]
+                }
+            ],
+            "type": "Multiline",
+            "defaultValue": "",
+            "visible": true,
+            "internalName": "remarks",
+            "displayName": "ERP_LblRemarks",
+            "value": ""
+        }
+    ]
+}

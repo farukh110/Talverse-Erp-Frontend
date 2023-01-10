@@ -1,0 +1,48 @@
+{
+    "formFields": [
+      {
+        "mode": "Edit",
+        "size": "xSmall",
+        "validations": [
+          {
+            "name": "RequiredFieldValidation",
+            "options": [
+              {
+                "key": "isRequired",
+                "value": false,
+                "validationMessage": "Please Select Start Date"
+              }
+            ]
+          }
+        ],
+        "type": "DatePicker",
+        "dataItems": [],
+        "defaultValue": "",
+        "visible": true,
+        "internalName": "startDate",
+        "displayName": "Start Date"
+      },
+      {
+        "mode": "Edit",
+        "size": "xSmall",
+        "validations": [
+          {
+            "name": "RequiredFieldValidation",
+            "options": [
+              {
+                "key": "isRequired",
+                "value": false,
+                "validationMessage": "Please Select End Date"
+              }
+            ]
+          }
+        ],
+        "type": "DatePicker",
+        "dataItems": [],
+        "defaultValue": "",
+        "visible": true,
+        "internalName": "endDate",
+        "displayName": "End Date"
+      }    
+    ]
+  }

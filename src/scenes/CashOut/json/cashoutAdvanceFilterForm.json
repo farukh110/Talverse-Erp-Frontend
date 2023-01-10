@@ -1,0 +1,66 @@
+{
+    "formFields": [
+      {
+        "mode": "Edit",
+        "size": "xSmall",
+        "validations": [
+          {
+            "name": "RequiredFieldValidation",
+            "options": [
+              {
+                "key": "isRequired",
+                "value": false,
+                "validationMessage": "Please Select Transfer Point Type"
+              }
+            ]
+          }
+        ],
+        "type": "AutoComplete",
+        "dataItems": [],
+        "defaultValue": "",
+        "visible": true,
+        "componentName": "transferPointTypeId",
+        "placeholder": "Search By Transfer Point Type",
+        "selectText": "Search By Transfer Point Type",
+        "dataSource": "GetAllPagedData",
+        "dataTextField": "transferPointType",
+        "dataValueField": "id",
+        "preserveItemAfterSelection": true,
+        "parameters": [
+          {
+            "key": "Table",
+            "value": "transferPointTypes"
+          },
+          {
+            "key": "SkipCount",
+            "value": 0
+          },
+          {
+            "key": "Sorting",
+            "value": "transferPointType ASC"
+          },
+          {
+            "key": "MaxResultCount",
+            "value": 100
+          },
+          {
+            "key":"SelectFields",
+            "value":"Id,FK_transferPointTypes.ID_TransferPointTypeTranslation_CoreId_Name_transferPointType"
+          },
+          {
+            "key": "QueryFilters",
+            "value": {
+              "fieldName":"",
+              "operator":"AND",
+              "filters": [
+              {
+                "fieldName":"isDeleted",
+                "operator":"=",
+                "value": false
+              }] 
+            }
+          }
+        ]
+      }    
+    ]
+  }

@@ -1,0 +1,48 @@
+{
+    "formFields": [
+      {
+        "mode": "Edit",
+        "size": "Large",
+        "validations": [
+          {
+            "name": "RequiredFieldValidation",
+            "options": [
+              {
+                "key": "isRequired",
+                "value": true,
+                "validationMessage": "ERP_Error_FieldPleaseEnterAddtionalTarget"
+              }
+            ]
+          }
+        ],
+        "type": "Number",
+        "defaultValue": "",
+        "visible": true,
+        "internalName": "target",
+        "displayName": "ERP_LblAdditionalTarget",
+        "value": ""
+      },
+      {
+        "mode": "Edit",
+        "size": "Large",
+        "validations": [
+            {
+              "name": "RequiredFieldValidation",
+              "options": [
+                {
+                  "key": "isRequired",
+                  "value": true,
+                  "validationMessage": "ERP_Error_FieldPleaseEnterComment"
+                }
+              ]
+            }
+          ],
+        "type": "Multiline",
+        "defaultValue": "",
+        "visible": true,
+        "internalName": "additionalInfo",
+        "displayName": "ERP_LblComments",
+        "value": ""
+      }
+    ]
+  }

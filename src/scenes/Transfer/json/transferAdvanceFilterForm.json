@@ -1,0 +1,177 @@
+{
+    "formFields": [
+        {
+            "mode": "Edit",
+            "size": "xSmall",
+            "validations": [
+                {
+                    "name": "RequiredFieldValidation",
+                    "options": [
+                        {
+                            "key": "isRequired",
+                            "value": false,
+                            "validationMessage": "Please Select Transfer Date"
+                        }
+                    ]
+                }
+            ],
+            "type": "RangePicker",
+            "dataItems": [],
+            "defaultValue": null,
+            "visible": true,
+            "internalName": "TransferDate",
+            "displayName": "ERP_LblTransferDate",
+            "value": ""
+        },
+        {
+            "mode": "Edit",
+            "size": "xxSmall",
+            "validations": [],
+            "type": "Text",
+            "defaultValue": null,
+            "visible": true,
+            "internalName": "packageId",
+            "displayName": "ERP_LblTrackingNumber",
+            "value": ""
+        },
+        {
+            "mode": "Edit",
+            "size": "xxSmall",
+            "validations": [],
+            "type": "AutoComplete",
+            "dataItems": [],
+            "defaultValue": "",
+            "visible": true,
+            "componentName": "TransferFromId",
+            "placeholder": "ERP_LblSearchByOrigin",
+            "selectText": "ERP_LblSearchByOrigin",
+            "dataSource": "GetAllSupportersList",
+            "dataTextField": "name",
+            "dataValueField": "userId",
+            "preserveItemAfterSelection": true,
+            "parameters": [
+                {
+                    "key": "SkipCount",
+                    "value": 0
+                },
+                {
+                    "key": "Sorting",
+                    "value": "Name"
+                },
+                {
+                    "key": "MaxResultCount",
+                    "value": 1000
+                }
+            ]
+        },
+        {
+            "mode": "Edit",
+            "size": "xxSmall",
+            "validations": [],
+            "type": "AutoComplete",
+            "dataItems": [],
+            "defaultValue": "",
+            "visible": true,
+            "componentName": "TransferToId",
+            "placeholder": "ERP_LblSearchByDestination",
+            "selectText": "ERP_LblSearchByDestination",
+            "dataSource": "GetAllPagedData",
+            "dataTextField": "name",
+            "dataValueField": "id",
+            "preserveItemAfterSelection": true,
+            "parameters": [
+                {
+                    "key": "Table",
+                    "value": "TransferPoints"
+                },
+                {
+                    "key": "SkipCount",
+                    "value": 0
+                },
+                {
+                    "key": "Sorting",
+                    "value": "Name"
+                },
+                {
+                    "key": "MaxResultCount",
+                    "value": 200
+                },
+                {
+                    "key": "SelectFields",
+                    "value": "Id ,FK_TransferPoints.Id_TransferPointTranslation_CoreId_Name_Name"
+                },
+                {
+                    "key": "QueryFilters",
+                    "value": {
+                        "fieldName": "",
+                        "operator": "AND",
+                        "filters": [
+                            {
+                                "fieldName": "isDeleted",
+                                "operator": "=",
+                                "value": false
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "mode": "Edit",
+            "size": "xxSmall",
+            "validations": [],
+            "type": "AutoComplete",
+            "dataItems": [],
+            "defaultValue": "",
+            "visible": true,
+            "componentName": "StatusId",
+            "placeholder": "ERP_LblSearchByStatus",
+            "selectText": "ERP_LblSearchByStatus",
+            "dataSource": "GetAllPagedData",
+            "dataTextField": "name",
+            "dataValueField": "id",
+            "preserveItemAfterSelection": true,
+            "parameters": [
+                {
+                    "key": "Table",
+                    "value": "Statuses"
+                },
+                {
+                    "key": "SkipCount",
+                    "value": 0
+                },
+                {
+                    "key": "Sorting",
+                    "value": "Name"
+                },
+                {
+                    "key": "MaxResultCount",
+                    "value": 200
+                },
+                {
+                    "key": "SelectFields",
+                    "value": "Id ,FK_Statuses.Id_StatusTranslation_CoreId_InternalName_Name"
+                },
+                {
+                    "key": "QueryFilters",
+                    "value": {
+                        "fieldName": "",
+                        "operator": "AND",
+                        "filters": [
+                            {
+                                "fieldName": "isDeleted",
+                                "operator": "=",
+                                "value": false
+                            },
+                            {
+                                "fieldName": "Type",
+                                "operator": "=",
+                                "value": "Package"
+                            }
+                        ]
+                    }
+                }
+            ]
+        }
+    ]
+}

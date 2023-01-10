@@ -1,0 +1,116 @@
+{
+    "formFields": [
+        {
+            "mode": "Edit",
+            "size": "Large",
+            "validations": null,
+            "type": "LanguageTranslation",
+            "defaultValue": "",
+            "visible": true,
+            "internalName": "translations",
+            "displayName": "ERP_LblTranslations",
+            "value": "",
+            "fields": [
+                {
+                    "mode": "Edit",
+                    "size": "Medium",
+                    "validations": [
+                        {
+                            "name": "RequiredFieldValidation",
+                            "options": [
+                                {
+                                    "key": "isRequired",
+                                    "value": true,
+                                    "validationMessage": "ERP_Error_FieldThisFieldIsRequired"
+                                }
+                            ]
+                        }
+                    ],
+                    "type": "Text",
+                    "defaultValue": "",
+                    "visible": true,
+                    "internalName": "name",
+                    "displayName": "ERP_LblHtmlTemplateName",
+                    "value": ""
+                },
+                {
+                    "mode": "Edit",
+                    "size": "Medium",
+                    "validations": null,
+                    "type": "Multiline",
+                    "defaultValue": "",
+                    "visible": true,
+                    "internalName": "content",
+                    "displayName": "ERP_LblHtmlTemplateContent",
+                    "value": ""
+                }
+            ]
+        },
+        {
+            "mode": "Edit",
+            "size": "xSmall",
+            "validations": [
+                {
+                    "name": "RequiredFieldValidation",
+                    "options": [
+                        {
+                            "key": "isRequired",
+                            "value": true,
+                            "validationMessage": "ERP_Error_FieldThisFieldIsRequired"
+                        }
+                    ]
+                }
+            ],
+            "type": "Text",
+            "defaultValue": "",
+            "visible": true,
+            "internalName": "type",
+            "displayName": "ERP_LblHtmlTemplateType",
+            "value": ""
+        },
+        {
+            "mode": "Edit",
+            "size": "xSmall",
+            "validations": [],
+            "type": "Text",
+            "defaultValue": "",
+            "visible": true,
+            "internalName": "code",
+            "displayName": "ERP_LblHtmlTemplateCode",
+            "value": ""
+        },
+        {
+            "mode": "Edit",
+            "size": "xSmall",
+            "validations": null,
+            "type": "Checkbox",
+            "defaultValue": "",
+            "visible": true,
+            "internalName": "isDeleted",
+            "displayName": "ERP_LblIsDelete",
+            "value": ""
+        },
+        {
+            "mode": "Edit",
+            "size": "xSmall",
+            "validations": null,
+            "type": "DateTimePicker",
+            "defaultValue": "",
+            "visible": true,
+            "internalName": "creationTime",
+            "displayName": "ERP_LblCreatedOn",
+            "value": ""
+          },
+          {
+            "mode": "Edit",
+            "size": "xSmall",
+            "validations": null,
+            "type": "DateTimePicker",
+            "defaultValue": "",
+            "visible": true,
+            "internalName": "lastModificationTime",
+            "displayName": "ERP_LblLastModificationTime",
+            "value": ""
+          }
+    ]
+}

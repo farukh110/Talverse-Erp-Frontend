@@ -1,0 +1,80 @@
+{
+    "formFields": [
+      {
+        "mode": "Edit",
+        "size": "xSmall",
+        "validations": null,
+        "type": "AutoComplete",
+        "dataItems": [],
+        "defaultValue": "",
+        "visible": true,
+        "componentName": "productId",
+        "placeholder": "ERP_LblSearchByProduct",
+        "selectText": "ERP_LblSearchByProduct",
+        "dataSource": "GetAllPagedData",
+        "dataTextField": "productName",
+        "dataValueField": "id",
+        "preserveItemAfterSelection": true,
+        "parameters": [
+          {
+            "key": "Table",
+            "value": "Products"
+          },
+          {
+            "key": "SkipCount",
+            "value": 0
+          },
+          {
+            "key": "Sorting",
+            "value": "productName ASC"
+          },
+          {
+            "key": "MaxResultCount",
+            "value": 500
+          },
+          {
+            "key":"SelectFields",
+            "value":"Id,FK_products.ID_ProductTranslation_CoreId_Name_productName"
+          }          
+        ]
+      },
+      {
+        "mode": "Edit",
+        "size": "xSmall",
+        "validations": null,
+        "type": "AutoComplete",
+        "dataItems": [],
+        "defaultValue": "",
+        "visible": true,
+        "componentName": "id",
+        "placeholder": "ERP_LblSearchByProductForm",
+        "selectText": "ERP_LblSearchByProductForm",
+        "dataSource": "GetAllPagedData",
+        "dataTextField": "productFormName",
+        "dataValueField": "id",
+        "preserveItemAfterSelection": true,
+        "parameters": [
+          {
+            "key": "Table",
+            "value": "ProductForms"
+          },
+          {
+            "key": "SkipCount",
+            "value": 0
+          },
+          {
+            "key": "Sorting",
+            "value": "productFormName ASC"
+          },
+          {
+            "key": "MaxResultCount",
+            "value": 500
+          },
+          {
+            "key":"SelectFields",
+            "value":"Id,FK_productForms.ID_ProductFormTranslation_CoreId_Name_productFormName"
+          }
+        ]
+      }    
+    ]
+  }

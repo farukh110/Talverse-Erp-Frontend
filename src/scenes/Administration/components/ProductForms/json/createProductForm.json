@@ -1,0 +1,188 @@
+{
+  "formFields": [
+    {
+      "mode": "Edit",
+      "size": "Large",
+      "validations": null,
+      "type": "LanguageTranslation",
+      "defaultValue": "",
+      "visible": true,
+      "internalName": "translations",
+      "displayName": "ERP_LblTranslations",
+      "value": "",
+      "fields": [
+        {
+          "mode": "Edit",
+          "size": "Small",
+          "validations": [
+            {
+              "name": "RequiredFieldValidation",
+              "options": [
+                {
+                  "key": "isRequired",
+                  "value": true,
+                  "validationMessage": "ERP_Error_FieldThisFieldIsRequired"
+                }
+              ]
+            }
+          ],
+          "type": "Text",
+          "defaultValue": "",
+          "visible": true,
+          "internalName": "name",
+          "displayName": "ERP_LblName",
+          "value": ""
+        },
+        {
+          "mode": "Edit",
+          "size": "Medium",
+          "validations": null,
+          "type": "Multiline",
+          "defaultValue": "",
+          "visible": true,
+          "internalName": "description",
+          "displayName": "ERP_LblDescription",
+          "value": ""
+        },
+        {
+          "mode": "Edit",
+          "size": "Large",
+          "validations": null,
+          "type": "Multiline",
+          "defaultValue": "",
+          "visible": true,
+          "internalName": "formFields",
+          "displayName": "ERP_LblFormFields",
+          "value": ""
+        },
+        {
+          "mode": "ReadOnly",
+          "size": "Small",
+          "validations": null,
+          "type": "Text",
+          "defaultValue": "1",
+          "visible": false,
+          "internalName": "sourceAppId",
+          "displayName": "SourceAppId",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "mode": "Edit",
+      "size": "Small",
+      "validations": [
+        {
+          "name": "RequiredFieldValidation",
+          "options": [
+            {
+              "key": "isRequired",
+              "value": true,
+              "validationMessage": "ERP_Error_FieldThisFieldIsRequired"
+            }
+          ]
+        }
+      ],
+      "type": "AutoComplete",
+      "dataItems": [],
+      "defaultValue": "",
+      "visible": true,
+      "internalName": "productId",
+      "componentName": "productId",
+      "placeholder": "Please Select Product",
+      "selectText": "ERP_LblProduct",
+      "dataSource": "GetAllPagedData",
+      "dataTextField": "productName",
+      "dataValueField": "id",
+      "preserveItemAfterSelection": true,
+      "parameters": [
+        {
+          "key": "Table",
+          "value": "Products"
+        },
+        {
+          "key": "SkipCount",
+          "value": 0
+        },
+        {
+          "key": "Sorting",
+          "value": "productName ASC"
+        },
+        {
+          "key": "MaxResultCount",
+          "value": 500
+        },
+        {
+          "key":"SelectFields",
+          "value":"Id,FK_products.ID_ProductTranslation_CoreId_Name_productName"
+        }
+      ]
+    },
+    {
+      "mode": "Edit",
+      "size": "Small",
+      "validations": null,
+      "type": "Checkbox",
+      "defaultValue": "",
+      "visible": true,
+      "internalName": "isActive",
+      "displayName": "ERP_LblIsActive",
+      "value": ""
+    },
+    {
+      "mode": "ReadOnly",
+      "size": "Small",
+      "validations": null,
+      "type": "Text",
+      "defaultValue": "1",
+      "visible": false,
+      "internalName": "sourceAppId",
+      "displayName": "SourceAppId",
+      "value": "1"
+    },
+    {
+      "mode": "Edit",
+      "size": "Small",
+      "validations": null,
+      "type": "Text",
+      "defaultValue": "",
+      "visible": false,
+      "internalName": "creationTime",
+      "displayName": "Creation Time",
+      "value": ""
+    },
+    {
+      "mode": "Edit",
+      "size": "Small",
+      "validations": null,
+      "type": "Checkbox",
+      "defaultValue": "",
+      "visible": false,
+      "internalName": "isDeleted",
+      "displayName": "Is Deleted",
+      "value": ""
+    },
+    {
+      "mode": "Edit",
+      "size": "Small",
+      "validations": null,
+      "type": "Checkbox",
+      "defaultValue": true,
+      "visible": false,
+      "internalName": "secureEntity",
+      "displayName": "Secure Entity",
+      "value": ""
+    },
+    {
+      "mode": "Edit",
+      "size": "Small",
+      "validations": null,
+      "type": "Text",
+      "defaultValue": "",
+      "visible": false,
+      "internalName": "creatorUserId",
+      "displayName": "Creator User Id",
+      "value": ""
+    }
+  ]
+}

@@ -1,0 +1,117 @@
+{
+    "formFields": [
+        {
+            "mode": "Edit",
+            "size": "xSmall",
+            "validations": [],
+            "type": "DatePicker",
+            "defaultValue": null,
+            "visible": true,
+            "internalName": "o.PerformedDate",
+            "displayName": "ERP_LblPerformedDate",
+            "value": ""
+        },
+        {
+            "mode": "Edit",
+            "size": "xSmall",
+            "validations": [],
+            "type": "DatePicker",
+            "dataItems": [],
+            "defaultValue": null,
+            "visible": true,
+            "internalName": "whenToPerform",
+            "displayName": "ERP_LblWhenToPerform",
+            "value": ""
+        },
+        {
+            "mode": "Edit",
+            "size": "xxSmall",
+            "validations": [],
+            "type": "AutoComplete",
+            "dataItems": [],
+            "defaultValue": "",
+            "visible": true,
+            "componentName": "id",
+            "placeholder": "ERP_LblSearchByCountry",
+            "selectText": "ERP_LblSearchByCountry",
+            "dataSource": "GetAllPagedData",
+            "dataTextField": "name",
+            "dataValueField": "id",
+            "preserveItemAfterSelection": true,
+            "parameters": [
+                {
+                    "key": "Table",
+                    "value": "Countries"
+                },
+                {
+                    "key": "SkipCount",
+                    "value": 0
+                },
+                {
+                    "key": "Sorting",
+                    "value": "name ASC"
+                },
+                {
+                    "key": "MaxResultCount",
+                    "value": 100
+                },
+                {
+                    "key": "SelectFields",
+                    "value": "Id,FK_countries.ID_CountryTranslation_CoreId_Name_name"
+                }
+            ]
+        },
+        {
+            "mode": "Edit",
+            "size": "xxSmall",
+            "validations": [],
+            "type": "AutoComplete",
+            "dataItems": [],
+            "defaultValue": "",
+            "visible": true,
+            "componentName": "statusId",
+            "placeholder": "ERP_LblSearchByOrderStatus",
+            "selectText": "ERP_LblSearchByOrderStatus",
+            "dataSource": "GetAllPagedData",
+            "dataTextField": "code",
+            "dataValueField": "id",
+            "preserveItemAfterSelection": true,
+            "parameters": [
+                {
+                    "key": "Table",
+                    "value": "Statuses"
+                },
+                {
+                    "key": "SkipCount",
+                    "value": 0
+                },
+                {
+                    "key": "Sorting",
+                    "value": "code ASC"
+                },
+                {
+                    "key": "MaxResultCount",
+                    "value": 100
+                },
+                {
+                    "key": "SelectFields",
+                    "value": "Id,FK_statuses.ID_StatusTranslation_CoreId_InternalName_code"
+                },
+                {
+                    "key": "QueryFilters",
+                    "value": {
+                      "fieldName": "",
+                      "operator": "AND",
+                      "filters": [
+                        {
+                          "fieldName": "Type",
+                          "operator": "=",
+                          "value": "Subscription"
+                        }
+                      ]
+                    }
+                  }
+            ]
+        }
+    ]
+}
